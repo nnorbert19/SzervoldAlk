@@ -1,0 +1,30 @@
+﻿@using System.Collections.Generic
+@model List<EnrollmentDateVM>
+@{
+    ViewData["Title"] = "EnrollmentDateRiport";
+}
+
+<h2>Első riportunk</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Első jelentkezés</th>
+            <th>Hallgatók száma</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.EnrollmentDate)
+                </td>
+                <td>
+                    @item.StudentCount
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
